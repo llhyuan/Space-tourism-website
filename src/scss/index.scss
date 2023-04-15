@@ -1,0 +1,205 @@
+/* Reset agent's default margins, to make sure what you see is what you applied. No suprises. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scroll behaviour */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* a elements that don't have a class get default styles */
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* Remove the style for list */
+ul,
+li {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.subhead1 {
+  color: #ffffff;
+  font-family: 'Bellefair', serif;
+}
+
+.h5,
+.subhead2,
+.navtext,
+.body {
+  color: #ffffff;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.body {
+  color: #ffffff;
+  font-family: 'Barlow', sans-serif;
+}
+
+.h1 {
+  font-size: 5rem;
+}
+
+.h2 {
+  font-size: 3rem;
+}
+
+.h3 {
+  font-size: 1.5rem;
+}
+
+.h4 {
+  font-size: 1.25rem;
+}
+
+.h5 {
+  font-size: 1.15rem;
+  color: #d0d6f9;
+}
+
+.subhead1 {
+  font-size: 1.75rem;
+}
+
+.subhead2 {
+  font-size: 0.875rem;
+}
+
+.navtext {
+  font-size: 1rem;
+}
+
+.body {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.07rem;
+  color: #d0d6f9;
+}
+
+a,
+a:hover,
+a:active {
+  color: #ffffff;
+}
+
+.non-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 34em) {
+  .h1 {
+    font-size: 9.375rem;
+  }
+
+  .h2 {
+    font-size: 6.25rem;
+  }
+
+  .h3 {
+    font-size: 3.5rem;
+  }
+
+  .h4 {
+    font-size: 2rem;
+  }
+
+  .h5 {
+    font-size: 1.75rem;
+    color: #d0d6f9;
+  }
+
+  .subhead1 {
+    font-size: 1.75rem;
+  }
+
+  .subhead2 {
+    font-size: 0.875rem;
+  }
+
+  .navtext {
+    font-size: 1rem;
+  }
+
+  .body {
+    font-size: 1.125rem;
+    color: #d0d6f9;
+  }
+
+  
+
+}
+
+@media only screen and (min-width: 56em) {
+  .h1 {
+    font-size: 9.375rem;
+  }
+
+  .h2 {
+    font-size: 6.25rem;
+  }
+
+  .h3 {
+    font-size: 3.5rem;
+  }
+
+  .h4 {
+    font-size: 2rem;
+  }
+
+  .h5 {
+    font-size: 1.75rem;
+    color: #d0d6f9;
+  }
+
+  .subhead1 {
+    font-size: 1.75rem;
+  }
+
+  .subhead2 {
+    font-size: 0.875rem;
+  }
+
+  .navtext {
+    font-size: 1rem;
+  }
+
+  .body {
+    font-size: 1.125rem;
+    color: #d0d6f9;
+  }
+}

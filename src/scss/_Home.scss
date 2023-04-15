@@ -1,0 +1,54 @@
+@use './variables' as v;
+
+.home-page {
+  min-height: 100vh;
+  padding-top: 16vh;
+
+  background-image: url('../assets/home/background-home-mobile.jpg');
+  background-size: cover;
+
+  .intro {
+    max-width: 30rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    .h5 {
+      letter-spacing: 0.25rem;
+    }
+    p {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 13.5rem;
+    background-color: #ffffff;
+
+    margin: 9rem auto 0 auto;
+    .explore {
+     color: black; 
+    }
+  }
+}
+
+@media only screen and (min-width: 34em) {
+  .home-page{
+background-image: url('../assets/home/background-home-tablet.jpg');
+background-size: cover;
+
+    .container {
+      .explore {
+        font-size: 2rem;
+      }
+    }
+  } 
+  
+}
+
