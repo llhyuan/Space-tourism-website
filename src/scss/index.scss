@@ -60,14 +60,13 @@ select {
 
 .h5,
 .subhead2,
-.navtext,
-.body {
-  color: #ffffff;
+.navtext {
+  color: #d0d6f9;
   font-family: 'Barlow Condensed', sans-serif;
 }
 
 .body {
-  color: #ffffff;
+  color: #d0d6f9;
   font-family: 'Barlow', sans-serif;
 }
 
@@ -89,7 +88,6 @@ select {
 
 .h5 {
   font-size: 1.15rem;
-  color: #d0d6f9;
 }
 
 .subhead1 {
@@ -98,17 +96,22 @@ select {
 
 .subhead2 {
   font-size: 0.875rem;
+  letter-spacing: 0.2rem;
 }
 
 .navtext {
   font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
 }
 
 .body {
   font-size: 1rem;
   line-height: 1.75rem;
   letter-spacing: 0.07rem;
-  color: #d0d6f9;
 }
 
 a,
@@ -140,7 +143,6 @@ a:active {
 
   .h5 {
     font-size: 1.75rem;
-    color: #d0d6f9;
   }
 
   .subhead1 {
@@ -157,11 +159,7 @@ a:active {
 
   .body {
     font-size: 1.125rem;
-    color: #d0d6f9;
   }
-
-  
-
 }
 
 @media only screen and (min-width: 56em) {
@@ -183,7 +181,6 @@ a:active {
 
   .h5 {
     font-size: 1.75rem;
-    color: #d0d6f9;
   }
 
   .subhead1 {
@@ -200,6 +197,5 @@ a:active {
 
   .body {
     font-size: 1.125rem;
-    color: #d0d6f9;
   }
 }

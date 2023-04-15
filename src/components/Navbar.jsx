@@ -43,22 +43,24 @@ function Navbar() {
             }}
             icon={faX}
           />
-          <ul className='navlinks navtext'>
-            <li>
+          <ul className='navlinks'>
+            <li className='navtext'>
               <Link to={`home/`}>
                 <p className='bold'>00</p>
                 <p>HOME</p>
               </Link>
             </li>
-            <li>
-              <p className='bold'>01</p>
-              <p>DESTINATION</p>
+            <li className='navtext'>
+              <Link to={`destination/`}>
+                <p className='bold'>01</p>
+                <p>DESTINATION</p>
+              </Link>
             </li>
-            <li>
+            <li className='navtext'>
               <p className='bold'>02</p>
               <p>CREW</p>
             </li>
-            <li>
+            <li className='navtext'>
               <p className='bold'>03</p>
               <p>TECHNOLOGY</p>
             </li>
@@ -66,24 +68,30 @@ function Navbar() {
         </nav>
       )}
       <nav className='non-mobile'>
-        <ul className='navlinks navtext'>
-          <li>
+        <ul className='navlinks'>
+          <li className='navtext'>
             <Link to={`home/`}>
               <p className='bold tablet'>00</p>
               <p>HOME</p>
             </Link>
           </li>
-          <li>
-            <p className='bold tablet'>01</p>
-            <p>DESTINATION</p>
+          <li className='navtext'>
+            <Link to={`destination/`}>
+              <p className='bold tablet'>01</p>
+              <p>DESTINATION</p>
+            </Link>
           </li>
-          <li>
-            <p className='bold tablet'>02</p>
-            <p>CREW</p>
+          <li className='navtext'>
+            <Link to={`crew/`}>
+              <p className='bold tablet'>02</p>
+              <p>CREW</p>
+            </Link>
           </li>
-          <li>
-            <p className='bold tablet'>03</p>
-            <p>TECHNOLOGY</p>
+          <li className='navtext'>
+            <Link to={`technology/`}>
+              <p className='bold tablet'>03</p>
+              <p>TECHNOLOGY</p>
+            </Link>
           </li>
         </ul>
       </nav>

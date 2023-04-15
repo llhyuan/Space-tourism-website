@@ -1,0 +1,143 @@
+.destination {
+  background-image: url('../assets/destination/background-destination-mobile.jpg');
+  background-size: cover;
+
+  min-height: 100vh;
+  min-width: 17.5rem;
+  padding: 16vh 2rem 0 2rem;
+
+  p {
+    text-align: center;
+  }
+
+  .select_des {
+    img {
+      aspect-ratio: 1/1;
+      width: 12rem;
+      margin: 2rem auto;
+    }
+    .title {
+      color: #ffffff;
+      letter-spacing: 0.2rem;
+
+      span {
+        color: grey;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+  .des_info {
+    padding: 0.3rem 0;
+    max-width: 35rem;
+    margin: 0 auto;
+    p[class='body'] {
+      margin-bottom: 2rem;
+    }
+
+    .des_options {
+      display: flex;
+      p {
+        display: inline;
+        margin: 0 min(5%, 1.56rem);
+        padding-bottom: 0.2rem;
+
+        &:first-of-type {
+          margin-left: auto;
+        }
+        &:last-of-type {
+          margin-right: auto;
+        }
+      }
+    }
+
+    .des_container {
+      border-top: 0.1rem solid rgba(211, 211, 211, 0.3);
+      padding-top: 2rem;
+
+      .des_distance {
+        margin-bottom: 2rem;
+      }
+
+      .des_time {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 34em) {
+  .destination {
+    background-image: url('../assets/destination/background-destination-tablet.jpg');
+    background-size: cover;
+
+    padding-top: 20vh;
+    padding-bottom: 2rem;
+
+    .title {
+      text-align: left;
+    }
+    .select_des {
+      img {
+        width: 18rem;
+        margin: 4rem auto;
+      }
+      .navtext-lg {
+        font-size: 1.2rem;
+      }
+    }
+    .des_info {
+      p[class='body'] {
+        margin-bottom: 3rem;
+      }
+      .des_container {
+        display: flex;
+        justify-content: space-around;
+
+        padding-top: 3rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 77em) {
+  .destination {
+    background-image: url('../assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 25vh 8rem 2rem 8rem;
+
+    .select_des {
+      flex: 1;
+
+      img {
+        width: 25rem;
+      }
+    }
+
+    .des_info {
+      flex: 1;
+      padding-left: 3.5rem;
+      p {
+        text-align: left;
+      }
+
+      .des_options {
+        justify-content: flex-start;
+
+        p:first-of-type {
+          margin-left: 0;
+        }
+      }
+
+      .des_container {
+        justify-content: flex-start;
+        div {
+          margin-right: 5rem;
+        }
+      }
+    }
+  }
+}
