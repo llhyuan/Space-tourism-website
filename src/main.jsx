@@ -12,6 +12,7 @@ const router = createBrowserRouter([
     path: '/Space-tourism-website/',
     element: <Root />,
     children: [
+      { index: true, element: <Home /> },
       {
         path: 'home',
         element: <Home />,
