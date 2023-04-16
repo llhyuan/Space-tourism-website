@@ -79,7 +79,6 @@
         li {
           padding: 3rem 0;
           margin-bottom: 0;
-          
         }
 
         .tablet {
@@ -92,21 +91,25 @@
 
 @media only screen and (min-width: 56em) {
   .navbar {
-    .decbar {
-      position: relative;
-      left: 1.5rem;
-      z-index: 100;
-
-      width: calc(100% - 60px - min(70%, 39rem));
-      border: 1px solid rgba(255, 255, 255, 0.6);
-    }
-
     .non-mobile {
       ul {
         .tablet {
           display: initial;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 77em) {
+  .navbar {
+    .decbar {
+      position: relative;
+      left: 3rem;
+      z-index: 100;
+
+      width: calc(100% - 60px - min(70%, 39rem));
+      border: 1px solid rgba(255, 255, 255, 0.6);
     }
   }
 }

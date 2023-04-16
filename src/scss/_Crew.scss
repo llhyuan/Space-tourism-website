@@ -21,7 +21,6 @@
   }
 
   .img-container {
-    width: 100%;
     border-bottom: 1px solid grey;
     margin-bottom: 1rem;
 
@@ -32,7 +31,7 @@
   }
 
   .crew-selector {
-margin-bottom: 1rem;
+    margin-bottom: 1rem;
 
     button {
       aspect-ratio: 1/1;
@@ -54,7 +53,86 @@ margin-bottom: 1rem;
 
     .name {
       margin-bottom: 1rem;
-      
+    }
+  }
+}
+
+@media only screen and (min-width: 34em) {
+  .crew {
+    background-image: url('../assets/crew/background-crew-tablet.jpg');
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20vh;
+
+    .title {
+      text-align: left;
+      margin-left: calc(1rem + 11%);
+    }
+    .img-container {
+      order: 10;
+      margin-bottom: 0;
+      border-bottom: none;
+
+      img {
+        height: 40rem;
+      }
+    }
+
+    .crew-selector {
+      order: 5;
+      margin-bottom: 2rem;
+    }
+
+    .crew-bio {
+      max-width: 37rem;
+      margin: 0 auto 2rem auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 77em) {
+  .crew {
+    background-image: url('../assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+
+    padding: 20vh 7rem 0 7rem;
+    text-align: left;
+
+    height: 100vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: space-between;
+
+    .title {
+      margin-bottom: 8rem;
+      margin-left: 0;
+    }
+
+    .img-container {
+      img {
+        height: 43rem;
+        margin: 0;
+      }
+    }
+
+    .crew-selector {
+      margin-bottom: 5rem;
+      button {
+        margin: 0 0.6rem;
+      }
+    }
+    .crew-bio {
+      margin-bottom: 5rem;
+
+      .bio {
+        letter-spacing: initial;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+      }
     }
   }
 }

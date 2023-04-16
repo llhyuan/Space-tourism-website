@@ -76,6 +76,7 @@
 
     .title {
       text-align: left;
+      margin-left: calc(1rem + 11%);
     }
     .select_des {
       img {
@@ -112,6 +113,10 @@
 
     .select_des {
       flex: 1;
+
+      .title {
+      margin-left: 0;
+      }
 
       img {
         width: 30rem;
