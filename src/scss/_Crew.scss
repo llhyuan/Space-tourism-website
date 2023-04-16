@@ -1,0 +1,60 @@
+@use './variables' as v;
+
+.crew {
+  background-image: url('../assets/crew/background-crew-mobile.jpg');
+  background-size: cover;
+
+  min-height: 100vh;
+  min-width: 17.5rem;
+  padding: 16vh 2rem 0 2rem;
+
+  text-align: center;
+
+  .title {
+    letter-spacing: v.$spacing-title;
+    margin-bottom: 4rem;
+
+    span {
+      color: grey;
+      margin-right: 0.8rem;
+    }
+  }
+
+  .img-container {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 1rem;
+
+    img {
+      height: 18rem;
+      margin: 0 auto;
+    }
+  }
+
+  .crew-selector {
+margin-bottom: 1rem;
+
+    button {
+      aspect-ratio: 1/1;
+      width: 0.7rem;
+
+      border-radius: 50%;
+      border: none;
+
+      margin: 0 0.4rem;
+
+      background-color: grey;
+    }
+  }
+
+  .crew-bio {
+    .position {
+      color: grey;
+    }
+
+    .name {
+      margin-bottom: 1rem;
+      
+    }
+  }
+}

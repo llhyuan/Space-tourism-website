@@ -14,6 +14,7 @@
     margin: 0 auto;
 
     .h5 {
+      color: #d0d6f9;
       letter-spacing: 0.25rem;
     }
     p {
@@ -24,31 +25,57 @@
   .container {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
     border-radius: 50%;
-    aspect-ratio: 1/1;
+    height: 13.5rem;
     width: 13.5rem;
     background-color: #ffffff;
 
     margin: 9rem auto 0 auto;
     .explore {
-     color: black; 
+      color: black;
     }
   }
 }
 
 @media only screen and (min-width: 34em) {
-  .home-page{
-background-image: url('../assets/home/background-home-tablet.jpg');
-background-size: cover;
+  .home-page {
+    background-image: url('../assets/home/background-home-tablet.jpg');
+    background-size: cover;
 
     .container {
       .explore {
         font-size: 2rem;
       }
     }
-  } 
-  
+  }
 }
 
+@media only screen and (min-width: 77em) {
+  .home-page {
+    background-image: url('../assets/home/background-home-desktop.jpg');
+    background-size: cover;
+
+    display: flex;
+
+    .intro {
+      position: relative;
+      top: 20vh;
+
+      text-align: left;
+      p:last-of-type {
+        letter-spacing: initial;
+        line-height: 2rem;
+      }
+    }
+
+    .container {
+      position: relative;
+      top: 20vh;
+
+      height: 17rem;
+      width: 17rem;
+    }
+  }
+}

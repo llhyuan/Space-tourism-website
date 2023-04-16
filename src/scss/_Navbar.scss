@@ -40,6 +40,9 @@
       letter-spacing: 0.2em;
       li {
         margin-bottom: 1.5rem;
+        &:hover {
+          border-bottom: 2px solid #ffffff;
+        }
 
         p {
           display: inline-block;
@@ -76,9 +79,7 @@
         li {
           padding: 3rem 0;
           margin-bottom: 0;
-          &:hover {
-            border-bottom: 2px solid #ffffff;
-          }
+          
         }
 
         .tablet {
@@ -96,8 +97,8 @@
       left: 1.5rem;
       z-index: 100;
 
-     width: calc(100% - 60px - min(70%, 39rem)); 
-     border: 1px solid rgba(255, 255, 255, 0.6);
+      width: calc(100% - 60px - min(70%, 39rem));
+      border: 1px solid rgba(255, 255, 255, 0.6);
     }
 
     .non-mobile {
@@ -106,7 +107,6 @@
           display: initial;
         }
       }
-    } 
+    }
   }
-  
 }
