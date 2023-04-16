@@ -57,8 +57,10 @@ function Navbar() {
               </Link>
             </li>
             <li className='navtext'>
-              <p className='bold'>02</p>
-              <p>CREW</p>
+              <Link to={`crew/`}>
+                <p className='bold'>02</p>
+                <p>CREW</p>
+              </Link>
             </li>
             <li className='navtext'>
               <p className='bold'>03</p>

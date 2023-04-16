@@ -1,7 +1,7 @@
 # Frontend Mentor - Space tourism website [UNDER CONSTRUCTION]
 
-This is challenge from Frontend Mentor. It's still under construction. For this project, I'm learning to use React router to implement to navigation within the website.
+This is a challenge from Frontend Mentor. The webpages are still under construction. For this project, I'm learning to use React router to implement navigations within the website.
 
-- [GitHub Pages](https://llhyuan.github.io/Space-tourism-website/)
+- [GitHub Pages (In progress)](https://llhyuan.github.io/Space-tourism-website/)
 
 

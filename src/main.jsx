@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './components/Home';
-import Destination from './routes/destination';
 
+import Home from './components/Home';
+import Crew from './routes/Crew';
+import Destination from './routes/destination';
 import Root from './routes/Root';
+
 import './scss/index.scss';
 
 const router = createBrowserRouter([
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'crew',
-        element: <div>this is a test comonent</div>,
+        element: <Crew />,
       },
       {
         path: 'technology',
