@@ -60,10 +60,10 @@
     display: flex;
 
     .intro {
-      position: relative;
-      top: 20vh;
+      margin-top: 20vh;
 
       text-align: left;
+
       p:last-of-type {
         letter-spacing: initial;
         line-height: 2rem;
@@ -71,8 +71,7 @@
     }
 
     .container {
-      position: relative;
-      top: 20vh;
+      margin-top: 40vh;
 
       height: 17rem;
       width: 17rem;

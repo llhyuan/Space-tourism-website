@@ -1,0 +1,135 @@
+@use './variables' as v;
+
+.technology {
+  background-image: url('../assets/technology/background-technology-mobile.jpg');
+  background-size: cover;
+
+  min-height: 100vh;
+  min-width: 17.5rem;
+  padding-top: 16vh;
+
+  text-align: center;
+
+  .title {
+    letter-spacing: v.$spacing-title;
+    margin-bottom: 2.5rem;
+
+    span {
+      color: grey;
+      margin-right: 0.8rem;
+    }
+  }
+
+  img {
+    margin-bottom: 2.5rem;
+  }
+
+  .tech-selector {
+    margin-bottom: 2rem;
+    .button {
+      aspect-ratio: 1/1;
+      width: 3rem;
+      border: 0.07rem solid grey;
+      border-radius: 50%;
+
+      font-family: 'Bellefair', serif;
+      color: #ffffff;
+      margin: 0 0.8rem;
+      background-color: transparent;
+    }
+
+    .active {
+      color: black;
+      background-color: #ffffff;
+    }
+  }
+
+  .tech-info {
+    margin: 0 2rem;
+    p:first-of-type {
+      margin-bottom: 0.8rem;
+    }
+    .term {
+      margin-bottom: 1rem;
+    }
+
+    .details {
+      line-height: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 34em) {
+  .technology {
+    background-image: url('../assets/technology/background-technology-tablet.jpg');
+    background-size: cover;
+
+    padding-top: 20vh;
+
+    .title {
+      text-align: left;
+      margin-left: calc(1rem + 11%);
+
+      margin-bottom: 4rem;
+    }
+
+    img {
+      width: 100vw;
+      margin-bottom: 3.5rem;
+    }
+
+    .tech-selector {
+      margin-bottom: 3rem;
+    }
+
+    .tech-info {
+      padding-bottom: 6.5rem;
+      .details {
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 85em) {
+  .technology {
+background-image: url('../assets/technology/background-technology-desktop.jpg');
+  background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .title {
+      width: 90%;
+    }
+
+    picture {
+      order: 10;
+      margin-left: auto;
+      img {
+        width: initial;
+      }
+    }
+
+    .tech-selector {
+      display: flex;
+      flex-direction: column;
+
+      padding: 0 0 0 1rem;
+      margin-left: auto;
+
+      .button {
+        width: 4.2rem;
+        margin: 0.8rem 0;
+        font-size: 1.5rem;
+      }
+    }
+    .tech-info {
+      margin-left: 3.8rem;
+      margin-right: 0;
+      text-align: left;
+    }
+  }
+}
