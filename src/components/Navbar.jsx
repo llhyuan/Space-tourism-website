@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+
+import {NavContext} from '../routes/Root';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import '../scss/_Navbar.scss';
 
 function Navbar() {
   const [menuStatus, setMenuStatus] = useState(false);
-  const [navStatus, setNavStatus] = useState(0);
+  const {navStatus, setNavStatus} = useContext(NavContext);
 
   return (
     <header className='navbar'>
