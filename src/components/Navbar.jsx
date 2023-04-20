@@ -6,6 +6,7 @@ import '../scss/_Navbar.scss';
 
 function Navbar() {
   const [menuStatus, setMenuStatus] = useState(false);
+  const [navStatus, setNavStatus] = useState(0);
 
   return (
     <header className='navbar'>
@@ -44,25 +45,45 @@ function Navbar() {
             icon={faX}
           />
           <ul className='navlinks'>
-            <li className='navtext'>
+            <li
+              className={'navtext' + (navStatus === 0 ? ' active' : '')}
+              onClick={() => {
+                setNavStatus(0);
+              }}
+            >
               <Link to={`home/`}>
                 <p className='bold'>00</p>
                 <p>HOME</p>
               </Link>
             </li>
-            <li className='navtext'>
+            <li
+              className={'navtext' + (navStatus === 1 ? ' active' : '')}
+              onClick={() => {
+                setNavStatus(1);
+              }}
+            >
               <Link to={`destination/`}>
                 <p className='bold'>01</p>
                 <p>DESTINATION</p>
               </Link>
             </li>
-            <li className='navtext'>
+            <li
+              className={'navtext' + (navStatus === 2 ? ' active' : '')}
+              onClick={() => {
+                setNavStatus(2);
+              }}
+            >
               <Link to={`crew/`}>
                 <p className='bold'>02</p>
                 <p>CREW</p>
               </Link>
             </li>
-            <li className='navtext'>
+            <li
+              className={'navtext' + (navStatus === 3 ? ' active' : '')}
+              onClick={() => {
+                setNavStatus(3);
+              }}
+            >
               <Link to={`technology/`}>
                 <p className='bold'>03</p>
                 <p>TECHNOLOGY</p>
@@ -73,25 +94,45 @@ function Navbar() {
       )}
       <nav className='non-mobile'>
         <ul className='navlinks'>
-          <li className='navtext'>
+          <li
+            className={'navtext' + (navStatus === 0 ? ' active' : '')}
+            onClick={() => {
+              setNavStatus(0);
+            }}
+          >
             <Link to={`home/`}>
               <p className='bold tablet'>00</p>
               <p>HOME</p>
             </Link>
           </li>
-          <li className='navtext'>
+          <li
+            className={'navtext' + (navStatus === 1 ? ' active' : '')}
+            onClick={() => {
+              setNavStatus(1);
+            }}
+          >
             <Link to={`destination/`}>
               <p className='bold tablet'>01</p>
               <p>DESTINATION</p>
             </Link>
           </li>
-          <li className='navtext'>
+          <li
+            className={'navtext' + (navStatus === 2 ? ' active' : '')}
+            onClick={() => {
+              setNavStatus(2);
+            }}
+          >
             <Link to={`crew/`}>
               <p className='bold tablet'>02</p>
               <p>CREW</p>
             </Link>
           </li>
-          <li className='navtext'>
+          <li
+            className={'navtext' + (navStatus === 3 ? ' active' : '')}
+            onClick={() => {
+              setNavStatus(3);
+            }}
+          >
             <Link to={`technology/`}>
               <p className='bold tablet'>03</p>
               <p>TECHNOLOGY</p>
