@@ -110,7 +110,7 @@ export default function Destination() {
   );
 }
 
-export async function loader() {
+export function loader() {
   let desData = data['destinations'];
 
   return desData;

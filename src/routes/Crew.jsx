@@ -81,7 +81,7 @@ export default function Crew() {
   }
 }
 
-export async function loader({ params }) {
+export function loader({ params }) {
   const crewId = params['crewId'];
   const crewData = data['crew'];
 
