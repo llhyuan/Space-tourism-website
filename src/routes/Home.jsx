@@ -1,10 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {NavContext} from '../routes/Root'
+import { NavContext } from '../routes/Root';
 import '../scss/_Home.scss';
 
 export default function Home() {
-  const {setNavStatus} = useContext(NavContext);
+  const { setNavStatus } = useContext(NavContext);
+
+  useEffect(()=>{
+    setNavStatus(0);
+  }, []);
 
   return (
     <div className='home-page'>
@@ -18,16 +22,15 @@ export default function Home() {
           experience!
         </p>
       </div>
-      <div
-        className='container'
+      <Link
+        to={`/space-tourism-website/destination/`}
+        className='explore h3'
         onClick={() => {
           setNavStatus(1);
         }}
       >
-        <Link className='explore h3' to={`/Space-tourism-website/destination/`}>
-          EXPLORE
-        </Link>
-      </div>
+        EXPLORE
+      </Link>
     </div>
   );
 }

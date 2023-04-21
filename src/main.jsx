@@ -2,16 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Home from './components/Home';
-import Crew from './routes/Crew';
-import Destination from './routes/destination';
+import Home from './routes/Home';
+import Crew, { loader as crewLoader } from './routes/Crew';
+import Destination, { loader as desLoader } from './routes/destination';
 import Root from './routes/Root';
+import Technology, {loader as techLoader} from './routes/Technology';
 
 import './scss/index.scss';
 
 const router = createBrowserRouter([
   {
-    path: '/Space-tourism-website/',
+    path: '/space-tourism-website',
     element: <Root />,
     children: [
       { index: true, element: <Home /> },
@@ -22,14 +23,17 @@ const router = createBrowserRouter([
       {
         path: 'destination',
         element: <Destination />,
+        loader: desLoader,
       },
       {
-        path: 'crew',
+        path: 'crew/:crewId',
         element: <Crew />,
+        loader: crewLoader,
       },
       {
-        path: 'technology',
-        element: <div>this is a test comonent</div>,
+        path: 'technology/:termId',
+        element: <Technology />,
+        loader: techLoader,
       },
     ],
   },

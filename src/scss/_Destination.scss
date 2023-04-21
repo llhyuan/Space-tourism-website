@@ -6,7 +6,7 @@
 
   min-height: 100vh;
   min-width: 17.5rem;
-  padding: 16vh 2rem 0 2rem;
+  padding: 10.8rem 2rem 0 2rem;
 
   p {
     text-align: center;
@@ -37,6 +37,12 @@
 
     .des_options {
       display: flex;
+
+      .search {
+        visibility:hidden;
+        width: 0;
+      }
+
       p {
         display: inline;
         margin: 0 min(5%, 1.56rem);
@@ -47,6 +53,21 @@
         }
         &:last-of-type {
           margin-right: auto;
+        }
+
+        button {
+          border: none;
+          background-color: transparent;
+          
+          cursor: pointer;
+          &:hover {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+          }
+        }
+
+        .active {
+          color: #ffffff;
+          border-bottom: 2px solid #ffffff;
         }
       }
     }
@@ -71,7 +92,7 @@
     background-image: url('../assets/destination/background-destination-tablet.jpg');
     background-size: cover;
 
-    padding-top: 20vh;
+    padding-top: 11rem;
     padding-bottom: 2rem;
 
     .title {
@@ -109,18 +130,18 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 20vh 8rem 2rem 8rem;
+    padding: 11rem 8rem 0 8rem;
 
     .select_des {
       flex: 1;
 
       .title {
-      margin-left: 0;
+        margin-left: 0;
       }
 
       img {
         width: 30rem;
-        margin: 6rem auto;
+        margin: 6rem auto 4rem auto;
       }
     }
 
@@ -134,7 +155,7 @@
 
       .des_options {
         justify-content: flex-start;
-
+        
         p:first-of-type {
           margin-left: 0;
         }
@@ -143,7 +164,7 @@
       .des_container {
         justify-content: flex-start;
         div {
-          margin-right: 5rem;
+          margin-right: 3rem;
         }
       }
     }

@@ -2,7 +2,8 @@
 
 .home-page {
   min-height: 100vh;
-  padding-top: 16vh;
+  padding-top: 10.8rem;
+  padding-bottom: 4rem;
 
   background-image: url('../assets/home/background-home-mobile.jpg');
   background-size: cover;
@@ -22,7 +23,7 @@
     }
   }
 
-  .container {
+  .explore {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,8 +34,14 @@
     background-color: #ffffff;
 
     margin: 9rem auto 0 auto;
-    .explore {
-      color: black;
+    color: black;
+
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.2);
     }
   }
 }
@@ -44,10 +51,8 @@
     background-image: url('../assets/home/background-home-tablet.jpg');
     background-size: cover;
 
-    .container {
-      .explore {
-        font-size: 2rem;
-      }
+    .explore {
+      font-size: 2rem;
     }
   }
 }
@@ -60,7 +65,7 @@
     display: flex;
 
     .intro {
-      margin-top: 20vh;
+      margin-top: 7.5rem;
 
       text-align: left;
 
@@ -70,8 +75,8 @@
       }
     }
 
-    .container {
-      margin-top: 40vh;
+    .explore {
+      margin-top: 16rem;
 
       height: 17rem;
       width: 17rem;

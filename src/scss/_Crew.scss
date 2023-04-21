@@ -6,7 +6,7 @@
 
   min-height: 100vh;
   min-width: 17.5rem;
-  padding: 16vh 2rem 0 2rem;
+  padding: 10.8rem 2rem 0 2rem;
 
   text-align: center;
 
@@ -33,6 +33,11 @@
   .crew-selector {
     margin-bottom: 1rem;
 
+    .active {
+      background-color: #ffffff;
+    }
+
+
     button {
       aspect-ratio: 1/1;
       width: 0.7rem;
@@ -42,7 +47,12 @@
 
       margin: 0 0.4rem;
 
-      background-color: grey;
+      background-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
     }
   }
 
@@ -65,7 +75,7 @@
     display: flex;
     flex-direction: column;
 
-    padding-top: 20vh;
+    padding-top: 11rem;
 
     .title {
       text-align: left;
@@ -81,6 +91,11 @@
       }
     }
 
+    .content-container {
+      display: flex;
+      flex-direction: column;
+    }
+
     .crew-selector {
       order: 5;
       margin-bottom: 2rem;
@@ -93,42 +108,50 @@
   }
 }
 
-@media only screen and (min-width: 77em) {
+@media only screen and (min-width: 85em) {
   .crew {
     background-image: url('../assets/crew/background-crew-desktop.jpg');
     background-size: cover;
 
-    padding: 20vh 8rem 0 8rem;
+    padding: 11rem 7rem 0 7rem;
     text-align: left;
 
-    height: 100vh;
-    width: 100vw;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-content: space-between;
+    justify-content: space-between;
 
     .title {
       margin-bottom: 8rem;
       margin-left: 0;
+
+      position: absolute;
     }
 
     .img-container {
+
       img {
-        height: 43rem;
+        height: 45rem;
         margin: 0;
       }
     }
 
+    .content-container {
+      justify-content: center;
+    }
     .crew-selector {
-      margin-bottom: 5rem;
+      margin-bottom: 1rem;
+
       button {
-        margin: 0 0.6rem;
+        width: 1rem;
+        margin: 0 1rem;
       }
     }
     .crew-bio {
       margin-bottom: 5rem;
+      margin-left: 0;
 
       .bio {
+        width: min(41vw, 36rem);
         letter-spacing: initial;
         line-height: 2.5rem;
         font-size: 1.5rem;

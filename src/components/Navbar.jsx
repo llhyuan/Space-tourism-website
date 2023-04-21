@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import {NavContext} from '../routes/Root';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,8 @@ import '../scss/_Navbar.scss';
 function Navbar() {
   const [menuStatus, setMenuStatus] = useState(false);
   const {navStatus, setNavStatus} = useContext(NavContext);
-
+  const navigate = useNavigate();
+  
   return (
     <header className='navbar'>
       <svg
@@ -51,45 +52,41 @@ function Navbar() {
               className={'navtext' + (navStatus === 0 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(0);
+                navigate("home");
               }}
             >
-              <Link to={`home/`}>
                 <p className='bold'>00</p>
                 <p>HOME</p>
-              </Link>
             </li>
             <li
               className={'navtext' + (navStatus === 1 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(1);
+                navigate("destination");
               }}
             >
-              <Link to={`destination/`}>
                 <p className='bold'>01</p>
                 <p>DESTINATION</p>
-              </Link>
             </li>
             <li
               className={'navtext' + (navStatus === 2 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(2);
+                navigate("crew/0");
               }}
             >
-              <Link to={`crew/`}>
                 <p className='bold'>02</p>
                 <p>CREW</p>
-              </Link>
             </li>
             <li
               className={'navtext' + (navStatus === 3 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(3);
+                navigate('technology/0');
               }}
             >
-              <Link to={`technology/`}>
                 <p className='bold'>03</p>
                 <p>TECHNOLOGY</p>
-              </Link>
             </li>
           </ul>
         </nav>
@@ -100,45 +97,41 @@ function Navbar() {
             className={'navtext' + (navStatus === 0 ? ' active' : '')}
             onClick={() => {
               setNavStatus(0);
+              navigate("home");
             }}
           >
-            <Link to={`home/`}>
               <p className='bold tablet'>00</p>
               <p>HOME</p>
-            </Link>
           </li>
           <li
             className={'navtext' + (navStatus === 1 ? ' active' : '')}
             onClick={() => {
               setNavStatus(1);
+              navigate("destination");
             }}
           >
-            <Link to={`destination/`}>
               <p className='bold tablet'>01</p>
               <p>DESTINATION</p>
-            </Link>
           </li>
           <li
             className={'navtext' + (navStatus === 2 ? ' active' : '')}
             onClick={() => {
               setNavStatus(2);
+                navigate("crew/0");
             }}
           >
-            <Link to={`crew/`}>
               <p className='bold tablet'>02</p>
               <p>CREW</p>
-            </Link>
           </li>
           <li
             className={'navtext' + (navStatus === 3 ? ' active' : '')}
             onClick={() => {
               setNavStatus(3);
+                navigate('technology/0');
             }}
           >
-            <Link to={`technology/`}>
               <p className='bold tablet'>03</p>
               <p>TECHNOLOGY</p>
-            </Link>
           </li>
         </ul>
       </nav>
