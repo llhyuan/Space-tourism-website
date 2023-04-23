@@ -11,10 +11,8 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -30,83 +28,54 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![mobile-view1](./src/assets/screenshots/mobile1.png)
+![mobile-view2](./src/assets/screenshots/mobile2.png)
+![tablet-view1](./src/assets/screenshots/tablet1.png)
+![tablet-view2](./src/assets/screenshots/tablet2.png)
+![tablet-view3](./src/assets/screenshots/tablet3.png)
+![desktop-view1](./src/assets/screenshots/desktop1.png)
+![desktop-view2](./src/assets/screenshots/desktop2.png)
+![desktop-view3](./src/assets/screenshots/desktop3.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/llhyuan/Space-tourism-website)
+- Live Site URL: [Github page](https://llhyuan.github.io/Space-tourism-website/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- React hooks (useState, useContext, useEffect) 
+- SCSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [React Router](https://reactrouter.com/en/main) - Client side rendering library 
+- [Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react) - For icons 
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+1, Using React Router for client side routing. 
+    - Different pages are built as React components and loaded accordingly as the user navigates through the website. 
+    - Url parameters are used to help load different data on the same page. 
+    - Though data is provided locally in this project, loader and useLoaderData are used, faking a structure of fetching and filtering data from a database.
+2, Using createContext, useContext and useEffect are used to coordinate among components.
+    - A state is used at the root of the web app to keep track of the current page.
+    - This information is then used to keep the navbar's active state in sync.
+    - However, when user navigates back along the history stack, the navbar active status would not update.
+        - context is used share navbar active status and the setter function to all other page components.
+        - useEffect is used to call that setter function to update the navbar's active status, to be in sync with the current page.
+3, Utility classes are used to make styling different titles across pages easiler. 
+    - At the end of this project, I'm starting to see the point of tailwind css. Combine it with user defined utility classes might keep the html a bit tidier, while riding high on that TAILWIND. 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [React Router Tutorial](https://reactrouter.com/en/main/start/tutorial) - Following through this tutorial gives me a holistic idea of what react router can do. It's a good place to start.
+- [YouTube tutorial on setting up utility classes](https://www.youtube.com/watch?v=gP8yFWCTr7Q) 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- LinkedIn - [Hangyuan Liu](www.linkedin.com/in/hangyuan-liu-a9282718b)
+- Frontend Mentor - [@llhyuan](https://www.frontendmentor.io/profile/llhyuan)
