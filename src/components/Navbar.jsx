@@ -1,16 +1,17 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import {NavContext} from '../routes/Root';
+import { NavContext } from '../routes/Root';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import '../scss/_Navbar.scss';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   const [menuStatus, setMenuStatus] = useState(false);
-  const {navStatus, setNavStatus} = useContext(NavContext);
+  const { navStatus, setNavStatus } = useContext(NavContext);
   const navigate = useNavigate();
-  
+
   return (
     <header className='navbar'>
       <svg
@@ -52,7 +53,7 @@ function Navbar() {
               className={'navtext' + (navStatus === 0 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(0);
-                navigate("home");
+                navigate('home');
               }}
             >
                 <p className='bold'>00</p>
@@ -62,21 +63,21 @@ function Navbar() {
               className={'navtext' + (navStatus === 1 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(1);
-                navigate("destination");
+                navigate('destination');
               }}
             >
-                <p className='bold'>01</p>
-                <p>DESTINATION</p>
+              <p className='bold'>01</p>
+              <p>DESTINATION</p>
             </li>
             <li
               className={'navtext' + (navStatus === 2 ? ' active' : '')}
               onClick={() => {
                 setNavStatus(2);
-                navigate("crew/0");
+                navigate('crew/0');
               }}
             >
-                <p className='bold'>02</p>
-                <p>CREW</p>
+              <p className='bold'>02</p>
+              <p>CREW</p>
             </li>
             <li
               className={'navtext' + (navStatus === 3 ? ' active' : '')}
@@ -85,8 +86,8 @@ function Navbar() {
                 navigate('technology/0');
               }}
             >
-                <p className='bold'>03</p>
-                <p>TECHNOLOGY</p>
+              <p className='bold'>03</p>
+              <p>TECHNOLOGY</p>
             </li>
           </ul>
         </nav>
@@ -97,41 +98,41 @@ function Navbar() {
             className={'navtext' + (navStatus === 0 ? ' active' : '')}
             onClick={() => {
               setNavStatus(0);
-              navigate("home");
+              navigate('home');
             }}
           >
-              <p className='bold tablet'>00</p>
-              <p>HOME</p>
+            <p className='bold tablet'>00</p>
+            <p>HOME</p>
           </li>
           <li
             className={'navtext' + (navStatus === 1 ? ' active' : '')}
             onClick={() => {
               setNavStatus(1);
-              navigate("destination");
+              navigate('destination');
             }}
           >
-              <p className='bold tablet'>01</p>
-              <p>DESTINATION</p>
+            <p className='bold tablet'>01</p>
+            <p>DESTINATION</p>
           </li>
           <li
             className={'navtext' + (navStatus === 2 ? ' active' : '')}
             onClick={() => {
               setNavStatus(2);
-                navigate("crew/0");
+              navigate('crew/0');
             }}
           >
-              <p className='bold tablet'>02</p>
-              <p>CREW</p>
+            <p className='bold tablet'>02</p>
+            <p>CREW</p>
           </li>
           <li
             className={'navtext' + (navStatus === 3 ? ' active' : '')}
             onClick={() => {
               setNavStatus(3);
-                navigate('technology/0');
+              navigate('technology/0');
             }}
           >
-              <p className='bold tablet'>03</p>
-              <p>TECHNOLOGY</p>
+            <p className='bold tablet'>03</p>
+            <p>TECHNOLOGY</p>
           </li>
         </ul>
       </nav>
