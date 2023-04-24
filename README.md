@@ -59,17 +59,19 @@ Users should be able to:
 ### What I learned
 
 1, Using React Router for client side routing. 
-    - Different pages are built as React components and loaded accordingly as the user navigates through the website. 
-    - Url parameters are used to help load different data on the same page. 
-    - Though data is provided locally in this project, loader and useLoaderData are used, faking a structure of fetching and filtering data from a database.
+  - Different pages are built as React components and loaded accordingly as the user navigates through the website. 
+  - Url parameters are used to help load different data on the same page. 
+  - Though data is provided locally in this project, loader and useLoaderData are used, faking a structure of fetching and filtering data from a database.
+
 2, Using createContext, useContext and useEffect are used to coordinate among components.
-    - A state is used at the root of the web app to keep track of the current page.
-    - This information is then used to keep the navbar's active state in sync.
-    - However, when user navigates back along the history stack, the navbar active status would not update.
-        - context is used share navbar active status and the setter function to all other page components.
-        - useEffect is used to call that setter function to update the navbar's active status, to be in sync with the current page.
+  - A state is used at the root of the web app to keep track of the current page.
+  - This information is then used to keep the navbar's active state in sync.
+  - However, when user navigates back along the history stack, the navbar active status would not update.
+      - context is used share navbar active status and the setter function to all other page components.
+      - useEffect is used to call that setter function to update the navbar's active status, to be in sync with the current page.
+
 3, Utility classes are used to make styling different titles across pages easiler. 
-    - At the end of this project, I'm starting to see the point of tailwind css. Combine it with user defined utility classes might keep the html a bit tidier, while riding high on that TAILWIND. 
+  - At the end of this project, I'm starting to see the point of tailwind css. Combine it with user defined utility classes might keep the html a bit tidier, while riding high on that TAILWIND. 
 
 ### Useful resources
 
